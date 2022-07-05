@@ -17,6 +17,8 @@ Terraform code to deploy and tear-down the practise aks cluster.
     - VM Size: Standard B2s
     - OS Disk: 30GB
     - Auto-scaling: Enabled
+    - Minimum count: 1
+    - Maximum count: 3
 
 ## How to use this script?
 
