@@ -20,14 +20,7 @@ Terraform code to deploy and tear-down the practise aks cluster.
 
 Rename the config/backend.example & terraform.tfvars.example to config/backend & terraform.tfvars respectively
 
-## Terraform initialization
-
-```
-terraform init \
-    -backend-config="config/backend"
-```
-
-## Azure Cloud Authentication
+## 1. Azure Cloud Authentication
 
 Export the variables with exact names as follows:
 
@@ -36,4 +29,11 @@ export ARM_CLIENT_ID="00000000-0000-0000-0000-000000000000"
 export ARM_CLIENT_SECRET="00000000-0000-0000-0000-000000000000"
 export ARM_SUBSCRIPTION_ID="00000000-0000-0000-0000-000000000000"
 export ARM_TENANT_ID="00000000-0000-0000-0000-000000000000"
+```
+
+## 2. Terraform initialization
+
+```
+terraform init \
+    -backend-config="config/backend"
 ```
