@@ -1,0 +1,3 @@
+rg_name = <RG_NAME>
+location = <REGION>
+admin_group_object_ids = [ <ADMIN_GROUP_OBJECT_IDS> ]
