@@ -4,6 +4,8 @@ Terraform code to deploy and tear-down the practise aks cluster.
 
 ## Features
 
+- Modularised structure.
+- Security
 - This script provisions a virtual network and a subnet, and deploys the node pool in this subnet.
 - tfstate stored in Azure Blob Storage.
 - Key Vault Secrets provider enabled.
@@ -36,4 +38,22 @@ export ARM_TENANT_ID="00000000-0000-0000-0000-000000000000"
 ```
 terraform init \
     -backend-config="config/backend"
+```
+
+## 3. Terraform plan
+
+```
+terraform plan -out=plans/plan-$(date +%s).tfplan
+```
+
+## 4. Terraform apply
+
+```
+terraform apply "plans/<plan>.tfplan"
+```
+
+## 5. Terraform destroy
+
+```
+terraform destroy
 ```
